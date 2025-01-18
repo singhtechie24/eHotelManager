@@ -9,14 +9,15 @@ import {
   onAuthStateChanged,
   User,
 } from 'firebase/auth';
+import Constants from 'expo-constants';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDsKccDW2uUcUAgJew8pCZ3GA6PspKDnP4",
-  authDomain: "ehotelmanager-final.firebaseapp.com",
-  projectId: "ehotelmanager-final",
-  storageBucket: "ehotelmanager-final.firebasestorage.app",
-  messagingSenderId: "497994469123",
-  appId: "1:497994469123:web:673a45856788e515a96336"
+  apiKey: Constants.expoConfig?.extra?.firebaseApiKey,
+  authDomain: Constants.expoConfig?.extra?.firebaseAuthDomain,
+  projectId: Constants.expoConfig?.extra?.firebaseProjectId,
+  storageBucket: Constants.expoConfig?.extra?.firebaseStorageBucket,
+  messagingSenderId: Constants.expoConfig?.extra?.firebaseMessagingSenderId,
+  appId: Constants.expoConfig?.extra?.firebaseAppId,
 };
 
 // Initialize Firebase
